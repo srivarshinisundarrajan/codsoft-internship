@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+   
+    color:white;
+    background-image: url(com.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    width:100%;
+    z-index:-1;
+}
+header{
+    background-color: black;
+    padding:10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding-bottom: 10px;
+    text-align: right;
+    
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px; 
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:hover{
+ background-color:white;
+ color:black;     
+}
+
+section {
+    padding: 20px;
+    
+}
+
+#about{
+    text-align:space-between;
+    width:900px;
+}
+
+#about2{
+    text-align:space-between;
+    width:900px;
+    }
+    #about3{
+        text-align:space-between;
+        width:900px;
+        }
+        #about3 {
+            display: flex;
+            align-items: center;
+        }
+        
+        .image-container {
+            flex: 1;
+            padding:40px;
+        }
+        
+        
+        .skills {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .skills h3 {
+            margin: 0;
+        }
+        
+        #about4{
+            text-align:space-between;
+            width:900px;
+            }
+            #projects{
+                text-align:space-between;
+                width:900px;
+                }
+                #resume{
+                    text-align:space-between;
+                    width:900px;
+                    }
+                    #resume button:hover{
+                        background-color:rgb(218, 122, 122);
+                    }
+                    
+#about p{
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;    
+    
+}
+
+footer {
+    background-color: #060505d2;
+    color: #ece7e7;
+    text-align: center;
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
+.bg{
+   background-color: rgba(0, 0, 0, 0.416);
+}
+#about4 img{
+ padding:20px;
+}
+
+
