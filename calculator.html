@@ -1,0 +1,105 @@
+<html>
+<head>
+    <title>Calculator</title>
+    <style>
+        table {
+            border: 2px solid rgb(50, 5, 5);
+            width: 30%;
+            height: 30%;
+            border-radius: 10px;
+            padding: 10px;
+            background: #3b393e;
+            color:aliceblue;
+        }
+        
+        table tr td {
+            border: 2px solid rgb(255, 248, 248);                 
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        table tr td:hover {
+            border: 2px solid rgb(0, 0, 0);                 
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            color:rgb(33, 24, 24);
+            background-color:white;
+        }
+
+        table tr  #ac  {
+            
+            background-color: #ff0303;
+        }
+
+        table tr  #del {
+            
+            background: #f70303;
+        }
+        
+        table tr #disp {
+            width: 70%; 
+            height: 70%;     
+            color: rgb(255, 255, 255);       
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td colspan="4" id="disp"></td>
+        </tr>
+        <tr>
+            <td onclick="func('7')">7</td>
+            <td onclick="func('8')">8</td>
+            <td onclick="func('9')">9</td>
+            <td onclick="func('+')">+</td>
+        </tr>
+        <tr>
+            <td onclick="func('4')">4</td>
+            <td onclick="func('5')">5</td>
+            <td onclick="func('6')">6</td>
+            <td onclick="func('-')">-</td>
+        </tr>
+        <tr>
+            <td onclick="func('1')">1</td>
+            <td onclick="func('2')">2</td>
+            <td onclick="func('3')">3</td>
+            <td onclick="func('=')">=</td>
+        </tr>
+        <tr>
+            <td onclick="func('')"></td>
+            <td onclick="func('/')">/</td>
+            <td id = "del" onclick="func('del')">D</td>
+            <td id ="ac" onclick="func('AC')">C</td>
+        </tr>
+    </table>
+
+    <script>
+        var exp = ""; //type of String;
+
+        function func(val) {
+            if (val == "=") {
+                document.getElementById("disp").innerText = eval(exp);
+                exp = eval(exp).toString();
+            }
+            
+            else if(val =="del"){
+                exp = exp.slice(0,exp.length-1);
+                document.getElementById("disp").innerText = exp;
+            }
+            else if(val=="AC"){
+                exp = "";
+                document.getElementById("disp").innerText = exp;
+            }
+
+            else {
+                exp = exp.concat(val);
+                document.getElementById("disp").innerText = exp;
+            }
+        }
+    </script>
+</body>
+</html>
